@@ -4,7 +4,7 @@
 ## Cat App
 * The app is built using React
 * API source: https://api.thecatapi.com/v1/images/
-* Feature: 
+* Features: 
   * User can "like" or "unlike" the cat image and the score will update accordingly
   * Cat images are sorted based on score in descending order
   * User can search for cats by breed name using the search bar

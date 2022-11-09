@@ -35,7 +35,7 @@ export default function CardItem({cat}:Props) {
             {temperament.split(',').map(el => <div key={el} className="bg-[#dbe4ff] text-xl rounded-2xl px-2 py-1 border-[1px] border-black">{el}</div>)}
         </div>
         <p className=" px-6 text-xl pb-3 text-slate-500">Origin: {origin}</p>
-        <p className="px-6 text-xl pb-5 text-slate-500">Life span: {lifeSpan}</p>
+        <p className="px-6 text-xl pb-5 text-slate-500">Life span: {lifeSpan} years</p>
         <a href={wikipediaUrl} target="_blank" rel="noopener noreferrer" className="px-6 text-xl pb-2 text-blue-500 font-semibold">Learn more</a>
     </div>
   )

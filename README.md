@@ -1,5 +1,7 @@
 # WARACLE
 
+Screenshot of the app:
+<img src="./screenshot.png" alt="cat-page">
 
 ## Cat App
 * The app is built using React

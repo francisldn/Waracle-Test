@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import { useAppDispatch } from '../redux/store';
 import { searchCats } from '../redux/catSlicer';
 
@@ -6,12 +6,10 @@ export default function SearchBar() {
     const [value, setValue] = useState('')
     const dispatch = useAppDispatch()
 
-    useEffect(() => {
-        if(!value) {
-            dispatch(searchCats(''))
-        }
-        dispatch(searchCats(value))
-    },[value])
+    const handleChange=(text:string)=> {
+        setValue(text)
+        dispatch(searchCats(text))
+    }
 
     const handleSubmit = (e:React.FormEvent) => {
         e.preventDefault();
@@ -24,7 +22,7 @@ export default function SearchBar() {
             <div className="w-7 h-7">
                 <img src="search.png" alt="" className="w-full h-full"/>
             </div>
-            <input type="text" placeholder="Search by breed, eg: Bengal" className="pl-5 text-xl flex-1 h-full" value={value} onChange={(e) => setValue(e.target.value)}/>
+            <input type="text" placeholder="Search by breed, eg: Bengal" className="pl-5 text-xl flex-1 h-full" value={value} onChange={(e) => handleChange(e.target.value)}/>
         </form>
     </div>
   )

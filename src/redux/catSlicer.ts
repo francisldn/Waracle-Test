@@ -46,7 +46,7 @@ const catSlice = createSlice({
       if (!action.payload) state.catsData = [...state.initialCatsData]
       else
         state.catsData = [
-          ...state.catsData.filter((cat) =>
+          ...state.initialCatsData.filter((cat) =>
             cat.breedName.toLowerCase().includes(action.payload.toLowerCase()),
           ),
         ]

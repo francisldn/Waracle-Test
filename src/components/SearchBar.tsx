@@ -20,7 +20,7 @@ export default function SearchBar() {
   
   return (
     <div className="flex flex-col w-screen ml-10 items-center">
-        <form className="flex border-2 rounded-3xl h-14 items-center pl-4 w-[95%] self-start mt-4" onSubmit={(e) => handleSubmit(e)}>
+        <form className="flex border-2 rounded-3xl h-14 items-center pl-4 w-[95%] self-start mt-4 overflow-hidden" onSubmit={(e) => handleSubmit(e)}>
             <div className="w-7 h-7">
                 <img src="search.png" alt="" className="w-full h-full"/>
             </div>

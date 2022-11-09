@@ -36,7 +36,7 @@ export default function CardItem({cat}:Props) {
         </div>
         <p className=" px-6 text-xl pb-3 text-slate-500">Origin: {origin}</p>
         <p className="px-6 text-xl pb-5 text-slate-500">Life span: {lifeSpan}</p>
-        <a href={wikipediaUrl} className="px-6 text-xl pb-2 text-blue-500 font-semibold">Learn more</a>
+        <a href={wikipediaUrl} target="_blank" rel="noopener noreferrer" className="px-6 text-xl pb-2 text-blue-500 font-semibold">Learn more</a>
     </div>
   )
 }

@@ -4,7 +4,8 @@ Screenshot of the app:
 <img src="./screenshot.png" alt="cat-page">
 
 ## Cat App
-* The app is built using React
+* The app is built using React, Redux and TypeScript
+* For styling, TailwindCSS is used
 * API source: https://api.thecatapi.com/v1/images/
 * Features: 
   * User can "like" or "unlike" the cat image and the score will update accordingly

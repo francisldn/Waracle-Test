@@ -11,7 +11,7 @@ export default function CardItem({cat}:Props) {
   const dispatch = useAppDispatch()
   const {id, imageURL, breedName, temperament, origin, lifeSpan, wikipediaUrl, vote} = cat
   return (
-    <div className="flex flex-col rounded-xl w-[90%] mx-auto overflow-hidden border-gray-300 border-2 shadow-gray-800 mb-4 box-effect">
+    <article className="flex flex-col rounded-xl w-[90%] mx-auto overflow-hidden border-gray-300 border-2 shadow-gray-800 mb-4 box-effect">
         <div className="overflow-hidden h-[300px] img-area">
             <span></span>
             <img src={imageURL} alt="" className="w-full h-full object-cover"/>
@@ -37,6 +37,6 @@ export default function CardItem({cat}:Props) {
         <p className=" px-6 text-xl pb-3 text-slate-500">Origin: {origin}</p>
         <p className="px-6 text-xl pb-5 text-slate-500">Life span: {lifeSpan} years</p>
         <a href={wikipediaUrl} target="_blank" rel="noopener noreferrer" className="px-6 text-xl pb-2 text-blue-500 font-semibold">Learn more</a>
-    </div>
+    </article>
   )
 }

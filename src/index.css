@@ -15,28 +15,28 @@ code {
 }
 
 .box-effect:hover {
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.7)
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
 }
 
 .img-area {
-  position:relative;
-  transition:0.5s;
-  overflow:hidden;
-  text-align:center;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  text-align: center;
 }
 
 .img-area span {
-  content:"";
-  top:0;
-  left:-110%;
-  width:100%;
-  height:100%;
-  background:#fff7;
-  transition:0.5s;
+  content: "";
+  top: 0;
+  left: -110%;
+  width: 100%;
+  height: 100%;
+  background: #fff7;
+  transition: 0.5s;
   transform: skewX(10deg);
-  position:absolute;
+  position: absolute;
 }
 
-.img-area:hover span{
-  left:110%
+.img-area:hover span {
+  left: 110%;
 }

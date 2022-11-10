@@ -25,21 +25,25 @@ const catSlice = createSlice({
   initialState,
   reducers: {
     addVote: (state, action: PayloadAction<string>) => {
-      state.catsData = state.catsData.map((cat) => {
-        if (cat.id === action.payload) {
-          cat.vote += 1
-        }
-        return cat
-      }).sort((a,b) => b.vote - a.vote)
+      state.catsData = state.catsData
+        .map((cat) => {
+          if (cat.id === action.payload) {
+            cat.vote += 1
+          }
+          return cat
+        })
+        .sort((a, b) => b.vote - a.vote)
       state.initialCatsData = [...state.catsData]
     },
     reduceVote: (state, action: PayloadAction<string>) => {
-      state.catsData = state.catsData.map((cat) => {
-        if (cat.id === action.payload) {
-          cat.vote -=1
-        }
-        return cat
-      }).sort((a,b) => b.vote - a.vote)
+      state.catsData = state.catsData
+        .map((cat) => {
+          if (cat.id === action.payload) {
+            cat.vote -= 1
+          }
+          return cat
+        })
+        .sort((a, b) => b.vote - a.vote)
       state.initialCatsData = [...state.catsData]
     },
     searchCats: (state, action: PayloadAction<string>) => {
@@ -57,20 +61,22 @@ const catSlice = createSlice({
       state.loading = true
     })
     builder.addCase(getCatsData.fulfilled, (state, action: PayloadAction<CatApi[]>) => {
-      state.catsData = action.payload.map((cat: CatApi) => {
-        return {
-          id: cat.id,
-          imageURL: cat.url,
-          breedName: cat.breeds[0].name,
-          temperament: cat.breeds[0].temperament,
-          origin: cat.breeds[0].origin,
-          lifeSpan: cat.breeds[0].life_span,
-          width: cat.width,
-          height: cat.height,
-          wikipediaUrl: cat.breeds[0].wikipedia_url,
-          vote: 0,
-        }
-      }).sort((a,b) => b.vote - a.vote)
+      state.catsData = action.payload
+        .map((cat: CatApi) => {
+          return {
+            id: cat.id,
+            imageURL: cat.url,
+            breedName: cat.breeds[0].name,
+            temperament: cat.breeds[0].temperament,
+            origin: cat.breeds[0].origin,
+            lifeSpan: cat.breeds[0].life_span,
+            width: cat.width,
+            height: cat.height,
+            wikipediaUrl: cat.breeds[0].wikipedia_url,
+            vote: 0,
+          }
+        })
+        .sort((a, b) => b.vote - a.vote)
 
       state.initialCatsData = [...state.catsData]
       state.loading = false
@@ -85,4 +91,4 @@ const catSlice = createSlice({
 })
 
 export default catSlice.reducer
-export const {addVote, reduceVote, searchCats} = catSlice.actions
+export const { addVote, reduceVote, searchCats } = catSlice.actions

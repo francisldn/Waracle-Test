@@ -12,7 +12,7 @@ export const getCats = async () => {
     return json
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error)
+      throw new Error(error.message)
     }
   }
 }
@@ -29,7 +29,7 @@ export const getCat = async (id: string) => {
     return json
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error)
+      throw new Error(error.message)
     }
   }
 }

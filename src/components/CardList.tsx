@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../redux/store"
 import CardItem from "./CardItem"
 import { getCatsData } from "../redux/catSlicer"
-import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallBack from "./ErrorFallBack";
 
 export default function CardList() {

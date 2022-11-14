@@ -10,7 +10,6 @@ export default function CardList() {
   useEffect(() => {
     dispatch(getCatsData())
   }, [])
-  console.log({ error: cats.error })
 
   return (
     <main
